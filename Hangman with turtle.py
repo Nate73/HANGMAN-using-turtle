@@ -1,5 +1,3 @@
-# things left to do: making the fonts and the size 
-# of the letters better say what the word was at the end
 import turtle
 import random
 import time
@@ -22,6 +20,7 @@ turtle.write("Letter that didn't work:", font=("Times New Roman", 15, "normal"))
 turtle.penup()
 turtle.goto(-100, 150)
 turtle.write("The word:", font=("Times New Roman", 15, "normal"))
+# All the code for drawing the hangman
 def drawing(x):
     if x == 1:
         turtle.penup()
@@ -104,8 +103,10 @@ def drawing(x):
         turtle.goto(105, 95)
         turtle.pendown()
         turtle.forward(60)
+# Pickes a random word from the inputted words
 word = words[random.randint(0, len(words)-1)]
 answer = ""
+# Draws the underscores for the letters in the word
 wordLength = len(word)
 turtle.penup()
 turtle.goto(-100, 130)
@@ -118,6 +119,7 @@ while wordLength > 0:
     turtle.forward(10)
     wordLength -= 1
 for i in range(9):
+    # For guessing the letters in the words
     letterAnswer = turtle.textinput("", "Guess a letter:")
     if letterAnswer in word:
         letterInAnswer = word.find(letterAnswer)
