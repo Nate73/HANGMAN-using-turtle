@@ -20,6 +20,7 @@ turtle.write("Letter that didn't work:", font=("Times New Roman", 15, "normal"))
 turtle.penup()
 turtle.goto(-100, 150)
 turtle.write("The word:", font=("Times New Roman", 15, "normal"))
+
 # All the code for drawing the hangman
 def drawing(x):
     if x == 1:
